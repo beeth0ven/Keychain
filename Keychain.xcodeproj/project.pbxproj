@@ -12,6 +12,11 @@
 		451ED8B51CA395D400646E21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 451ED8B31CA395D400646E21 /* Main.storyboard */; };
 		451ED8B71CA395D400646E21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 451ED8B61CA395D400646E21 /* Assets.xcassets */; };
 		451ED8BA1CA395D400646E21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 451ED8B81CA395D400646E21 /* LaunchScreen.storyboard */; };
+		451ED8C51CA395FA00646E21 /* KeychainWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 451ED8C41CA395FA00646E21 /* KeychainWrapper.m */; };
+		451ED8CD1CA3BC7200646E21 /* KeychainHandable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451ED8CC1CA3BC7200646E21 /* KeychainHandable.swift */; };
+		451ED8CF1CA3C26F00646E21 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451ED8CE1CA3C26F00646E21 /* Queue.swift */; };
+		451ED8D11CA3CB5000646E21 /* TouchIDHandable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451ED8D01CA3CB5000646E21 /* TouchIDHandable.swift */; };
+		451ED8D31CA3CD8D00646E21 /* DiskVar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451ED8D21CA3CD8D00646E21 /* DiskVar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,13 @@
 		451ED8B61CA395D400646E21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		451ED8B91CA395D400646E21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		451ED8BB1CA395D400646E21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		451ED8C31CA395FA00646E21 /* KeychainWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainWrapper.h; sourceTree = "<group>"; };
+		451ED8C41CA395FA00646E21 /* KeychainWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainWrapper.m; sourceTree = "<group>"; };
+		451ED8C91CA3967600646E21 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		451ED8CC1CA3BC7200646E21 /* KeychainHandable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainHandable.swift; sourceTree = "<group>"; };
+		451ED8CE1CA3C26F00646E21 /* Queue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
+		451ED8D01CA3CB5000646E21 /* TouchIDHandable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchIDHandable.swift; sourceTree = "<group>"; };
+		451ED8D21CA3CD8D00646E21 /* DiskVar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiskVar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +66,37 @@
 		451ED8AE1CA395D400646E21 /* Keychain */ = {
 			isa = PBXGroup;
 			children = (
-				451ED8AF1CA395D400646E21 /* AppDelegate.swift */,
 				451ED8B11CA395D400646E21 /* ViewController.swift */,
 				451ED8B31CA395D400646E21 /* Main.storyboard */,
+				451ED8C21CA395FA00646E21 /* KeychainWrapper */,
+				451ED8C11CA395EF00646E21 /* Supporting Files */,
+			);
+			path = Keychain;
+			sourceTree = "<group>";
+		};
+		451ED8C11CA395EF00646E21 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				451ED8AF1CA395D400646E21 /* AppDelegate.swift */,
+				451ED8D21CA3CD8D00646E21 /* DiskVar.swift */,
+				451ED8CE1CA3C26F00646E21 /* Queue.swift */,
+				451ED8C91CA3967600646E21 /* Bridging-Header.h */,
 				451ED8B61CA395D400646E21 /* Assets.xcassets */,
 				451ED8B81CA395D400646E21 /* LaunchScreen.storyboard */,
 				451ED8BB1CA395D400646E21 /* Info.plist */,
 			);
-			path = Keychain;
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		451ED8C21CA395FA00646E21 /* KeychainWrapper */ = {
+			isa = PBXGroup;
+			children = (
+				451ED8D01CA3CB5000646E21 /* TouchIDHandable.swift */,
+				451ED8CC1CA3BC7200646E21 /* KeychainHandable.swift */,
+				451ED8C31CA395FA00646E21 /* KeychainWrapper.h */,
+				451ED8C41CA395FA00646E21 /* KeychainWrapper.m */,
+			);
+			path = KeychainWrapper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +131,7 @@
 				TargetAttributes = {
 					451ED8AB1CA395D300646E21 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 6BDKUNMM63;
 					};
 				};
 			};
@@ -135,7 +171,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				451ED8CF1CA3C26F00646E21 /* Queue.swift in Sources */,
+				451ED8D11CA3CB5000646E21 /* TouchIDHandable.swift in Sources */,
+				451ED8D31CA3CD8D00646E21 /* DiskVar.swift in Sources */,
+				451ED8C51CA395FA00646E21 /* KeychainWrapper.m in Sources */,
 				451ED8B21CA395D400646E21 /* ViewController.swift in Sources */,
+				451ED8CD1CA3BC7200646E21 /* KeychainHandable.swift in Sources */,
 				451ED8B01CA395D400646E21 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -251,10 +292,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Keychain/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.beeth0ven.Keychain;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Keychain/Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -262,10 +308,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Keychain/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.beeth0ven.Keychain;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Keychain/Bridging-Header.h";
 			};
 			name = Release;
 		};
